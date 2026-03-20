@@ -1,0 +1,140 @@
+/* Menu specific overrides */
+.menu-hero {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: linear-gradient(180deg, rgba(15,15,17,0) 0%, #0f0f11 100%),
+                linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=2000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.menu-hero-content h1 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #fff, #ff6b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.menu-hero-content p {
+    font-size: 18px;
+    color: #e4e4e7;
+}
+
+.search-container {
+    padding: 40px 0 20px;
+}
+
+#menu-search {
+    width: 100%;
+}
+
+.category-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ff6b6b;
+    margin: 60px 0 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.menu-item {
+    background: #18181b;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 107, 107, 0.2);
+}
+
+.item-img {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.menu-item:hover .item-img img {
+    transform: scale(1.05);
+}
+
+.veg-nonveg-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.veg-nonveg-icon.veg {
+    color: #4caf50;
+    border: 1px solid #4caf50;
+}
+
+.veg-nonveg-icon.non-veg {
+    color: #f44336;
+    border: 1px solid #f44336;
+}
+
+.item-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.item-info p {
+    color: #a1a1aa;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.item-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}

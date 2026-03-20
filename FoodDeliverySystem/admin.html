@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delish Bites - Admin Dashboard</title>
+    <!-- Modern Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { background-color: #0f0f11; padding-top: 80px; }
+        .admin-dashboard { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .admin-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+        .admin-header h1 { color: #fff; font-size: 32px; font-weight: 700; }
+        .admin-controls { display: flex; gap: 15px; }
+        .btn-logout { background: transparent; border: 1px solid #ff6b6b; color: #ff6b6b; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; }
+        .btn-logout:hover { background: #ff6b6b; color: #fff; }
+        .dashboard-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .dashboard-card { background: rgba(30,30,34,0.7); backdrop-filter: blur(10px); padding: 30px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05); text-align: center; color: #fff; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .dashboard-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-color: rgba(255,107,107,0.3); }
+        .dashboard-card i { font-size: 40px; color: #ff6b6b; margin-bottom: 20px; }
+        .dashboard-card h3 { font-size: 20px; margin-bottom: 10px; font-weight: 600; }
+        .dashboard-card p { color: #a1a1aa; font-size: 14px; margin-bottom: 20px; }
+        .dashboard-card button { background: linear-gradient(135deg, #ff6b6b, #e07532); border: none; padding: 10px 20px; border-radius: 8px; color: #fff; cursor: pointer; font-weight: 600; }
+        .welcome-text { color: #e07532; display: block; margin-top: 10px; font-size: 16px; font-weight: 400; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>Delish Bites <span style="font-size: 12px; color: #ff6b6b; vertical-align: middle; margin-left: 5px; border: 1px solid #ff6b6b; padding: 2px 5px; border-radius: 4px;">ADMIN</span></span>
+            </div>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html">View Site</a></li>
+                    <li><a href="#" id="auth-logout" style="color: #ff6b6b;">Log Out</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="admin-dashboard">
+        <div class="admin-header">
+            <div>
+                <h1 id="admin-title">Dashboard</h1>
+                <span class="welcome-text" id="welcome-msg">Welcome, Admin</span>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <i class="fas fa-users"></i>
+                <h3>Manage Users</h3>
+                <p>View, block, or delete registered users.</p>
+                <button>View Users</button>
+            </div>
+            <div class="dashboard-card">
+                <i class="fas fa-hamburger"></i>
+                <h3>Manage Menu</h3>
+                <p>Add new dishes, update pricing, or remove items.</p>
+                <button>Edit Menu</button>
+            </div>
+            <div class="dashboard-card">
+                <i class="fas fa-truck"></i>
+                <h3>View Orders</h3>
+                <p>Track current orders, accept or reject incoming requests.</p>
+                <button>Check Orders</button>
+            </div>
+            <div class="dashboard-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Analytics</h3>
+                <p>View sales reports and visitor traffic.</p>
+                <button>View Stats</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const userRole = localStorage.getItem('user_role');
+            const userName = localStorage.getItem('user_name');
+            
+            if (userRole !== 'ADMIN') {
+                alert('Access Denied: Admins Only');
+                window.location.href = 'index.html';
+                return; // Stop execution
+            }
+
+            if (userName) {
+                document.getElementById('welcome-msg').innerText = `Welcome, ${userName}`;
+            }
+
+            document.getElementById('auth-logout').addEventListener('click', (e) => {
+                e.preventDefault();
+                localStorage.clear();
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>

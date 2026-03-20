@@ -1,0 +1,11 @@
+com\fooddelivery\config\WebConfig.class
+com\fooddelivery\model\Food.class
+com\fooddelivery\controller\FoodController.class
+com\fooddelivery\repository\FoodRepository.class
+com\fooddelivery\FoodDeliveryApplication.class
+com\fooddelivery\repository\UserRepository.class
+com\fooddelivery\service\FoodService.class
+com\fooddelivery\config\WebConfig$1.class
+com\fooddelivery\service\UserService.class
+com\fooddelivery\controller\UserController.class
+com\fooddelivery\model\User.class

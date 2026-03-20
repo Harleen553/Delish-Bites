@@ -1,0 +1,132 @@
+/* Home specific overrides */
+.hero-home {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: linear-gradient(180deg, rgba(15,15,17,0) 0%, #0f0f11 100%),
+                linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-home h1 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #fff, #ff6b6b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-home p {
+    font-size: 18px;
+    color: #e4e4e7;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.features, .how-it-works, .testimonials {
+    padding: 80px 0;
+}
+
+.features-container, .steps-container, .testimonial-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card, .step, .testimonial-card {
+    background: rgba(30, 30, 34, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover, .step:hover, .testimonial-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 107, 107, 0.2);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+.feature-icon i, .testimonial-card i {
+    font-size: 40px;
+    color: #ff6b6b;
+    margin-bottom: 20px;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #ff6b6b, #e07532);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 auto 20px;
+}
+
+.feature-card h3, .step h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.feature-card p, .step p {
+    color: #a1a1aa;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.cta-button {
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cta-primary {
+    background: linear-gradient(135deg, #ff6b6b, #e07532);
+    color: white;
+}
+
+.cta-primary:hover {
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    transform: translateY(-2px);
+}
+
+.cta-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.customer-name {
+    margin-top: 15px;
+    color: #ff6b6b;
+    font-weight: 600;
+    font-style: italic;
+}

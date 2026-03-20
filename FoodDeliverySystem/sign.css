@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #0f0f11;
+    background-image: radial-gradient(circle at 15% 50%, rgba(255, 107, 107, 0.15), transparent 25%),
+                      radial-gradient(circle at 85% 30%, rgba(224, 117, 50, 0.15), transparent 25%);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #e4e4e7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.auth-wrapper {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.glass-panel {
+    width: 100%;
+    max-width: 480px;
+    background: rgba(25, 25, 28, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.auth-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    color: #ff6b6b;
+}
+
+.auth-toggle {
+    display: flex;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 5px;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.auth-toggle button {
+    flex: 1;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #9ca3af;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.auth-toggle button.active {
+    background: #ff6b6b;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+.form-container {
+    position: relative;
+    min-height: 380px;
+}
+
+.auth-form {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.auth-form.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+.auth-form.active {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+}
+
+h2 {
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.form-subtitle {
+    color: #9ca3af;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #a1a1aa;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 16px;
+    color: #6b7280;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.input-with-icon input,
+.input-with-icon select {
+    width: 100%;
+    padding: 14px 16px 14px 45px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font-size: 14px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.input-with-icon select {
+    appearance: none;
+    cursor: pointer;
+}
+
+.input-with-icon select option {
+    background: #1e1e1e;
+    color: #fff;
+}
+
+.input-with-icon input:focus,
+.input-with-icon select:focus {
+    outline: none;
+    border-color: #ff6b6b;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.1);
+}
+
+.input-with-icon input:focus + i,
+.input-with-icon select:focus + i,
+.input-with-icon input:not(:placeholder-shown) ~ i {
+    color: #ff6b6b;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.primary-gradient {
+    background: linear-gradient(135deg, #ff6b6b, #e07532);
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.primary-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+    background: linear-gradient(135deg, #ff7b7b, #e88542);
+}
+
+.primary-gradient:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 500px) {
+    .glass-panel {
+        padding: 30px 20px;
+    }
+}
