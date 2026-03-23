@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delish Bites - Our Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>Delish Bites</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a data-route="home">Home</a></li>
+                    <li><a data-route="about">About Us</a></li>
+                    <li><a data-route="menu" class="active">Menu</a></li>
+                    <li><a data-route="signup" class="cart-icon"><i class="fas fa-user-alt"></i> Sign Up</a></li>
+                    <li><a data-route="cart" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="menu-hero">
+        <div class="container">
+            <div class="menu-hero-content">
+                <h1>Our Delicious Menu</h1>
+                <p>Explore our wide variety of dishes crafted with love and the finest ingredients.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="search-container">
+        <div class="search-bar">
+            <input type="text" id="menu-search" placeholder="Search for dishes...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </section>
+
+    <section class="menu-items">
+        <div class="container">
+            <div class="menu-category">
+                <h2 class="category-title">Fast Food</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" data-category="fast-food"><div class="item-img"><img src="images/chickenburger.jpeg" alt="Classic Cheeseburger"><span class="veg-nonveg-icon non-veg">&#9679;</span></div><div class="item-info"><h3>Classic Cheeseburger</h3><p>Juicy beef patty with cheese, lettuce, tomato, and special sauce.</p><div class="item-bottom"><span class="price">Rs 90</span><button class="add-to-cart" data-id="1" data-name="Classic Cheeseburger" data-price="90" data-img="images/chickenburger.jpeg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="fast-food"><div class="item-img"><img src="images/chicken.jpg" alt="Crispy Fried Chicken"><span class="veg-nonveg-icon non-veg">&#9679;</span></div><div class="item-info"><h3>Crispy Fried Chicken</h3><p>Golden fried chicken with our special seasoning blend.</p><div class="item-bottom"><span class="price">Rs 159</span><button class="add-to-cart" data-id="2" data-name="Crispy Fried Chicken" data-price="159" data-img="images/chicken.jpg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="fast-food"><div class="item-img"><img src="images/hotdog.jpeg" alt="Hot Dog"><span class="veg-nonveg-icon non-veg">&#9679;</span></div><div class="item-info"><h3>Classic Hot Dog</h3><p>Juicy sausage in a soft bun with mustard, ketchup, and onions.</p><div class="item-bottom"><span class="price">Rs 75</span><button class="add-to-cart" data-id="3" data-name="Classic Hot Dog" data-price="75" data-img="images/hotdog.jpeg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="fast-food"><div class="item-img"><img src="images/fries.jpeg" alt="French Fries"><span class="veg-nonveg-icon veg">&#9679;</span></div><div class="item-info"><h3>French Fries</h3><p>Crispy golden fries with a pinch of salt and herbs.</p><div class="item-bottom"><span class="price">Rs 60</span><button class="add-to-cart" data-id="4" data-name="French Fries" data-price="60" data-img="images/fries.jpeg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="fast-food"><div class="item-img"><img src="images/pizza.jpeg" alt="Margherita Pizza"><span class="veg-nonveg-icon non-veg">&#9679;</span></div><div class="item-info"><h3>Margherita Pizza</h3><p>Classic cheesy margherita pizza with a crisp base.</p><div class="item-bottom"><span class="price">Rs 190</span><button class="add-to-cart" data-id="28" data-name="Pizza" data-price="190" data-img="images/pizza.jpeg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="fast-food"><div class="item-img"><img src="images/Noodles.jpeg" alt="Noodles"><span class="veg-nonveg-icon non-veg">&#9679;</span></div><div class="item-info"><h3>Noodles</h3><p>Tasty, spicy noodles cooked with lots of vegetables.</p><div class="item-bottom"><span class="price">Rs 90</span><button class="add-to-cart" data-id="29" data-name="Noodles" data-price="90" data-img="images/Noodles.jpeg">Add to Cart</button></div></div></div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h2 class="category-title">Italian</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" data-category="italian"><div class="item-img"><img src="images/pizza.jpeg" alt="Pepperoni Pizza"><span class="veg-nonveg-icon non-veg">&#9679;</span></div><div class="item-info"><h3>Pepperoni Pizza</h3><p>Classic pizza with tomato sauce, mozzarella, and pepperoni.</p><div class="item-bottom"><span class="price">Rs 280</span><button class="add-to-cart" data-id="5" data-name="Pepperoni Pizza" data-price="280" data-img="images/pizza.jpeg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="italian"><div class="item-img"><img src="images/Creamy Pasta.jpeg" alt="Creamy Pasta"><span class="veg-nonveg-icon veg">&#9679;</span></div><div class="item-info"><h3>Creamy Pasta</h3><p>Penne pasta in rich white sauce with mushrooms and herbs.</p><div class="item-bottom"><span class="price">Rs 180</span><button class="add-to-cart" data-id="6" data-name="Creamy Pasta" data-price="180" data-img="images/Creamy Pasta.jpeg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="italian"><div class="item-img"><img src="images/lasagna.jpeg" alt="Vegetable Lasagna"><span class="veg-nonveg-icon veg">&#9679;</span></div><div class="item-info"><h3>Vegetable Lasagna</h3><p>Layers of pasta, cheese, and fresh vegetables baked to perfection.</p><div class="item-bottom"><span class="price">Rs 220</span><button class="add-to-cart" data-id="7" data-name="Vegetable Lasagna" data-price="220" data-img="images/lasagna.jpeg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="italian"><div class="item-img"><img src="images/Calamari.jpg" alt="Fried Calamari"><span class="veg-nonveg-icon non-veg">&#9679;</span></div><div class="item-info"><h3>Fried Calamari</h3><p>A popular appetizer made from battered and deep-fried squid rings or tentacles.</p><div class="item-bottom"><span class="price">Rs 220</span><button class="add-to-cart" data-id="8" data-name="Fried Calamari" data-price="220" data-img="images/Calamari.jpg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="italian"><div class="item-img"><img src="images/spaghetti.jpeg" alt="Spaghetti Carbonara"><span class="veg-nonveg-icon non-veg">&#9679;</span></div><div class="item-info"><h3>Spaghetti Carbonara</h3><p>Classic Roman dish with spaghetti, pancetta, egg, parmesan cheese, and black pepper.</p><div class="item-bottom"><span class="price">Rs 220</span><button class="add-to-cart" data-id="9" data-name="Spaghetti Carbonara" data-price="220" data-img="images/spaghetti.jpeg">Add to Cart</button></div></div></div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h2 class="category-title">Non-Veg</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" data-category="non-veg"><div class="item-img"><img src="images/tikka.jpg" alt="Chicken Tikka Masala"><span class="veg-nonveg-icon non-veg">&#9679;</span></div><div class="item-info"><h3>Chicken Tikka Masala</h3><p>Well-marinated chicken tikka masala with smoky flavor, served with coriander and mint chutney.</p><div class="item-bottom"><span class="price">Rs 180</span><button class="add-to-cart" data-id="10" data-name="Chicken Tikka" data-price="180" data-img="images/tikka.jpg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="non-veg"><div class="item-img"><img src="images/kabab.jpg" alt="Tundde Kabab"><span class="veg-nonveg-icon non-veg">&#9679;</span></div><div class="item-info"><h3>Tundde Kabab</h3><p>Fresh, soft, juicy, and well-seasoned kababs that melt in your mouth.</p><div class="item-bottom"><span class="price">Rs 210</span><button class="add-to-cart" data-id="11" data-name="Tundde Kabab" data-price="210" data-img="images/kabab.jpg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="non-veg"><div class="item-img"><img src="images/tandoori.jpeg" alt="Tandoori Chicken"><span class="veg-nonveg-icon non-veg">&#9679;</span></div><div class="item-info"><h3>Tandoori Chicken</h3><p>Smoky well-cooked chicken prepared in a traditional Indian tandoor.</p><div class="item-bottom"><span class="price">Rs 220</span><button class="add-to-cart" data-id="12" data-name="Tandoori Chicken" data-price="220" data-img="images/tandoori.jpeg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="non-veg"><div class="item-img"><img src="images/biryani.jpeg" alt="Mutton Biryani"><span class="veg-nonveg-icon non-veg">&#9679;</span></div><div class="item-info"><h3>Mutton Biryani</h3><p>Rich biryani inspired by royal Mughal kitchens, prepared with fragrant rice and tender mutton.</p><div class="item-bottom"><span class="price">Rs 380</span><button class="add-to-cart" data-id="13" data-name="Mutton Biryani" data-price="380" data-img="images/biryani.jpeg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="non-veg"><div class="item-img"><img src="images/fish.jpeg" alt="Fish Fry"><span class="veg-nonveg-icon non-veg">&#9679;</span></div><div class="item-info"><h3>Fish Fry</h3><p>A delicious fried fish dish with a crisp outer layer and flavorful seasoning.</p><div class="item-bottom"><span class="price">Rs 90</span><button class="add-to-cart" data-id="14" data-name="Fish Fry" data-price="90" data-img="images/fish.jpeg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="non-veg"><div class="item-img"><img src="images/butter.jpeg" alt="Butter Chicken"><span class="veg-nonveg-icon non-veg">&#9679;</span></div><div class="item-info"><h3>Butter Chicken</h3><p>Marinated and grilled chicken cooked in a creamy tomato-based sauce with butter and cream.</p><div class="item-bottom"><span class="price">Rs 180</span><button class="add-to-cart" data-id="15" data-name="Butter Chicken" data-price="180" data-img="images/butter.jpeg">Add to Cart</button></div></div></div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h2 class="category-title">Veg</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" data-category="veg"><div class="item-img"><img src="images/daal.jpeg" alt="Daal Makhni"><span class="veg-nonveg-icon veg">&#9679;</span></div><div class="item-info"><h3>Daal Makhni</h3><p>A rich dish with dried and fresh spices, herbs, and a slight smoky finish.</p><div class="item-bottom"><span class="price">Rs 110</span><button class="add-to-cart" data-id="16" data-name="Daal Makhni" data-price="110" data-img="images/daal.jpeg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="veg"><div class="item-img"><img src="images/palak.jpeg" alt="Palak Paneer"><span class="veg-nonveg-icon veg">&#9679;</span></div><div class="item-info"><h3>Palak Paneer</h3><p>Creamy spinach and paneer curry with balanced spice and comforting flavor.</p><div class="item-bottom"><span class="price">Rs 165</span><button class="add-to-cart" data-id="17" data-name="Palak Paneer" data-price="165" data-img="images/palak.jpeg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="veg"><div class="item-img"><img src="images/shahi.jpeg" alt="Shahi Paneer"><span class="veg-nonveg-icon veg">&#9679;</span></div><div class="item-info"><h3>Shahi Paneer</h3><p>A rich paneer curry with a creamy texture and festive flavor.</p><div class="item-bottom"><span class="price">Rs 180</span><button class="add-to-cart" data-id="18" data-name="Shahi Paneer" data-price="180" data-img="images/shahi.jpeg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="veg"><div class="item-img"><img src="images/Manchurian.jpg" alt="Manchurian"><span class="veg-nonveg-icon veg">&#9679;</span></div><div class="item-info"><h3>Manchurian</h3><p>A savory, slightly sweet, tangy, and mildly spicy Indo-Chinese favorite.</p><div class="item-bottom"><span class="price">Rs 110</span><button class="add-to-cart" data-id="19" data-name="Manchurian" data-price="110" data-img="images/Manchurian.jpg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="veg"><div class="item-img"><img src="images/bhature.jpeg" alt="Chhole Bhature"><span class="veg-nonveg-icon veg">&#9679;</span></div><div class="item-info"><h3>Chhole Bhature</h3><p>Spicy, tangy chickpeas served with soft, fluffy deep-fried bread.</p><div class="item-bottom"><span class="price">Rs 120</span><button class="add-to-cart" data-id="20" data-name="Chhole Bhature" data-price="120" data-img="images/bhature.jpeg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="veg"><div class="item-img"><img src="images/kulche.jpg" alt="Chhole Kulche"><span class="veg-nonveg-icon veg">&#9679;</span></div><div class="item-info"><h3>Chhole Kulche</h3><p>A popular North Indian street-food combination with spiced chickpeas and soft kulche.</p><div class="item-bottom"><span class="price">Rs 150</span><button class="add-to-cart" data-id="21" data-name="Chhole Kulche" data-price="150" data-img="images/kulche.jpg">Add to Cart</button></div></div></div>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h2 class="category-title">Desserts</h2>
+                <div class="menu-grid">
+                    <div class="menu-item" data-category="desserts"><div class="item-img"><img src="images/pancake.jpeg" alt="Stack Pancakes"><span class="veg-nonveg-icon veg">&#9679;</span></div><div class="item-info"><h3>Stack Pancakes</h3><p>Fluffy pancakes with maple syrup and fresh berries.</p><div class="item-bottom"><span class="price">Rs 120</span><button class="add-to-cart" data-id="22" data-name="Stack Pancakes" data-price="120" data-img="images/pancake.jpeg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="desserts"><div class="item-img"><img src="images/icecream.jpeg" alt="Chocolate Ice Cream"><span class="veg-nonveg-icon veg">&#9679;</span></div><div class="item-info"><h3>Chocolate Ice Cream</h3><p>Rich chocolate ice cream with chocolate chunks.</p><div class="item-bottom"><span class="price">Rs 149</span><button class="add-to-cart" data-id="23" data-name="Chocolate Ice Cream" data-price="149" data-img="images/icecream.jpeg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="desserts"><div class="item-img"><img src="images/brownie.jpg" alt="Chocolate Brownie"><span class="veg-nonveg-icon veg">&#9679;</span></div><div class="item-info"><h3>Chocolate Brownie</h3><p>Warm chocolate brownie with vanilla ice cream.</p><div class="item-bottom"><span class="price">Rs 119</span><button class="add-to-cart" data-id="24" data-name="Chocolate Brownie" data-price="119" data-img="images/brownie.jpg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="desserts"><div class="item-img"><img src="images/gulab.jpeg" alt="Gulab Jamun"><span class="veg-nonveg-icon veg">&#9679;</span></div><div class="item-info"><h3>Gulab Jamun</h3><p>Soft and syrupy milk-solid dessert flavored with rosewater and cardamom.</p><div class="item-bottom"><span class="price">Rs 79</span><button class="add-to-cart" data-id="25" data-name="Gulab Jamun" data-price="79" data-img="images/gulab.jpeg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="desserts"><div class="item-img"><img src="images/jalebi.jpeg" alt="Jalebi"><span class="veg-nonveg-icon veg">&#9679;</span></div><div class="item-info"><h3>Jalebi</h3><p>Crisp spirals with a warm, syrupy interior that melts in the mouth.</p><div class="item-bottom"><span class="price">Rs 49</span><button class="add-to-cart" data-id="26" data-name="Jalebi" data-price="49" data-img="images/jalebi.jpeg">Add to Cart</button></div></div></div>
+                    <div class="menu-item" data-category="desserts"><div class="item-img"><img src="images/doi.jpg" alt="Mishti Doi"><span class="veg-nonveg-icon veg">&#9679;</span></div><div class="item-info"><h3>Mishti Doi</h3><p>A delightful balance of sweetness and tanginess, making it a unique and satisfying dessert.</p><div class="item-bottom"><span class="price">Rs 99</span><button class="add-to-cart" data-id="27" data-name="Mishti Doi" data-price="99" data-img="images/doi.jpg">Add to Cart</button></div></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Delish Bites</h3>
+                    <p>Delivering delicious meals to your doorstep with a simple ordering experience and quick local access.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a data-route="home">Home</a></li>
+                        <li><a data-route="menu">Menu</a></li>
+                        <li><a data-route="about">About Us</a></li>
+                        <li><a data-route="signup">My Account</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Help & Info</h3>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Delivery Information</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Food Street, City</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-envelope"></i> info@delishbites.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Delish Bites. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-total">
+            <div class="total-row">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal">Rs 0.00</span>
+            </div>
+            <div class="total-row">
+                <span>Delivery Fee:</span>
+                <span>Rs 30.00</span>
+            </div>
+            <div class="total-row total">
+                <span>Total:</span>
+                <span id="cart-total">Rs 0.00</span>
+            </div>
+            <button class="checkout-btn" type="button">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="site-config.js"></script>
+    <script src="script.js"></script>
+    <script src="search.js"></script>
+</body>
+</html>
