@@ -7,11 +7,6 @@ Delish Bites is a full-stack food delivery web application built with a static f
 - Likitha Venugopal
 - Aditi Jha 
 
-### Roles
-- Frontend Design and Pages: `Add name here`
-- Frontend Logic and Integration: `Add name here`
-- Backend and Database: `Add name here`
-
 ## Project Overview
 
 The application is split into two parts:
@@ -215,14 +210,14 @@ APP_CORS_ALLOWED_ORIGINS=http://127.0.0.1:5500,http://localhost:5500
 ### 3. Start the backend
 
 ```powershell
-cd C:\Users\Harleenk\OneDrive\Desktop\Food\MD_2\FoodDeliverySystem\food-delivery
-.\mvnw.cmd spring-boot:run
+cd backend
+mvn spring-boot:run
 ```
 
 ### 4. Start the frontend
 
 ```powershell
-cd C:\Users\Harleenk\OneDrive\Desktop\Food\MD_2\FoodDeliverySystem
+cd frontend
 jwebserver -p 5500 -d .
 ```
 
@@ -262,61 +257,4 @@ jwebserver -p 5500 -d .
   "email": "demo@example.com"
 }
 ```
-
-## Improvements Made
-
-The following issues were identified and fixed:
-
-- removed hardcoded backend signup URL from the frontend
-- moved backend credentials out of `application.properties`
-- added `.env` support for backend configuration
-- prevented returning password values in signup responses
-- added duplicate email checking
-- added basic signup validation
-- switched password storage to BCrypt hashes
-- made internal frontend links dynamic through shared config
-- fixed broken cart modal checkout navigation
-- improved cart total consistency
-- corrected multiple text encoding issues in the frontend
-- updated old project info and launch settings
-
-## Known Limitations
-
-This project still has a few limitations:
-
-- there is no login endpoint yet
-- there is no real order persistence in the backend
-- checkout is a frontend simulation and not a stored order workflow
-- the food menu is currently static in the frontend
-- payment integration is not implemented
-
-## Future Enhancements
-
-- add login and authentication flow
-- connect the menu page directly to backend food data
-- add order placement and order history
-- add admin controls for food item management
-- add real payment gateway integration
-- add responsive navigation improvements
-- add unit and integration tests
-
-## Presentation Summary
-
-Delish Bites demonstrates:
-
-- a multi-page user interface
-- frontend and backend integration
-- Java-based API development
-- MySQL-based persistence
-- dynamic frontend configuration
-- improved validation and safer credential handling
-
-## Submission Notes
-
-Before final submission, make sure to:
-
-- replace the team placeholders with actual names
-- push the final code to GitHub
-- verify that `.env` is not committed
-- confirm the backend runs with your local MySQL credentials
-- test the full flow from menu to cart to signup
+Made by Harleen Kaur
