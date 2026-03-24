@@ -5,7 +5,6 @@ Delish Bites is a full-stack food delivery web application built with a static f
 ### Team Members
 - Harleen Kaur 
 - Likitha Venugopal
-- Aditi Jha 
 
 ## Project Overview
 
